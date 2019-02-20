@@ -18,5 +18,13 @@ steps:
     gem install rspec
   displayName: 'rspec install'
 
+- script: |
+    gem install bundler
+  displayName: 'bundler install'
+
+- script: |
+    cd kubernetes; bundle install
+  displayName: 'dependencies'
+
 - script: cd kubernetes; rspec
   displayName: 'rspec'
