@@ -20,11 +20,8 @@ steps:
 
 - script: |
     gem install bundler
-  displayName: 'bundler install'
-
-- script: |
-    cd kubernetes; bundle install
-  displayName: 'dependencies'
+    cd kubernetes; bundle install --retry=3 --jobs=4
+  displayName: 'bundle install'
 
 - script: cd kubernetes; rspec
   displayName: 'rspec'
