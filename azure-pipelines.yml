@@ -18,5 +18,5 @@ steps:
     gem install rspec
   displayName: 'rspec install'
 
-- script: rspec
+- script: cd kubernetes; rspec
   displayName: 'rspec'
